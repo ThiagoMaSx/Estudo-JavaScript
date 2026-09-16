@@ -13,7 +13,7 @@ const person = {
 // Acessando propriedades de um objeto
 
 const firstName = person.firstName;
-const hobbies = person.hobbies;
+const hobbiesList = person.hobbies;
 
 const {
   firstName: primeiroNome,
@@ -33,3 +33,24 @@ person.dog = "Rex";
 
 console.log(person.dog.age)
 console.log(dogName)
+
+// Ínicio de JSON
+const todos = [
+  {
+    id: 1,
+  description: "Estudar programação",
+  isCompleted: true
+  },
+  {
+    id: 2,
+  description: "Estudar POO",
+  isCompleted: false
+  }
+]
+
+const descriptionOfLastTodo = todos[1].description
+
+console.log(descriptionOfLastTodo) // irá mostrar a descrição do todo de id = 2.
+
+const todoJson = JSON.stringify(todos)
+const todosList = JSON.parse(todoJson)
